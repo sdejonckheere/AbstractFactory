@@ -8,24 +8,23 @@ namespace AbstractFactory
 {
     class FactoryProducer
     {
+    
+         public MealFactory getMealFactory(String factoryType){
 
-        public static AbstractFactory getFactory(String choice)
-        {
+             if (factoryType == "SushiFactory")
+             {
+                 return new SushiMealFactory();
+             }
+             if (factoryType == "WrapFactory")
+             {
+                 return new WrapMealFactory();
+             }
+             if (factoryType == "WokFactory")
+             {
+                 return new WokMealFactory();
+             }
 
-            if (choice == "Shape")
-            {
-
-                return new ShapeFactory();
-
-            }
-            if (choice == "Color")
-            {
-
-                return new ColorFactory();
-
-            }
-
-            return null;
+             return null;
 
         }
     

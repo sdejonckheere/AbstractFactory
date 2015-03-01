@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace AbstractFactory
 {
-    public class Triangle : Shape
+    interface Meal
     {
-        public void draw()
-        {
-            System.Diagnostics.Debug.WriteLine("Hallo ik ben een driehoek");
-        }
+
+        void order();
+        void prepare();
+        void deliver();
+    
     }
 }

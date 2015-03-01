@@ -16,15 +16,17 @@ namespace AbstractFactory
         {
             InitializeComponent();
 
-            AbstractFactory shapeFactory = FactoryProducer.getFactory("Shape");
+            FactoryProducer FP = new FactoryProducer();
+            
+            MealFactory myMealFactory;
+            
+            myMealFactory = FP.getMealFactory("WokFactory");
 
-            Shape shape1 = shapeFactory.getShape("Triangle");
+            Meal myMeal = myMealFactory.createMeal("Bangkok");
 
-            shape1.draw();
+            myMeal.deliver();
 
-            shape1 = shapeFactory.getShape("Square");
 
-            shape1.draw();
 
         }
     }

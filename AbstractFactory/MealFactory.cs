@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace AbstractFactory
 {
-    public class Square : Shape
+    interface MealFactory
     {
-        public void draw()
-        {
-            System.Diagnostics.Debug.WriteLine("Hoi ik ben een Square");
-        }
+    
+        Meal createMeal(String mealType);
+    
     }
 }
